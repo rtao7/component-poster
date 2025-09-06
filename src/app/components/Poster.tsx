@@ -1,0 +1,20 @@
+import NavigationMenu from "./prototype/NavigationMenu"
+
+export default function Poster() {
+    return (
+        <div className="h-[calc(100vh-20vh)] md:grid grid-cols-8 grid-rows-1 gap-8 md:m-14">
+        
+            <div className="prototype place-content-center border-8 border-white col-span-5">
+                <NavigationMenu />
+            </div>
+            <div className="border-b-1 col-span-3 flex flex-col justify-end gap-1">
+                <h2 className="h-12 border-t-1 text-sm font-mono uppercase tracking-wide">Animated Mini Navigation</h2>
+                <p className="text-sm leading-6">This navigation menu draws inspiration from designs by Microsoft Copilot, Rauno, Vercel. Messing around with motion, shadows, and gradients to add depth and some delight. I utilized Framer Motion to create the effects when the mouse enters or leaves targeted navigation items. #exploration</p>
+                <div className="border-t-1 flex gap-8">
+                <h2 className="text-sm leading-6">Inspirations</h2>
+                <p className="text-sm leading-6">Rauno</p>
+                </div>
+            </div>
+      </div>
+    )
+}
