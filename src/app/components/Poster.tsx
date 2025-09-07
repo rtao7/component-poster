@@ -1,4 +1,5 @@
 import NavigationMenu from "./prototype/NavigationMenu"
+import Popover from "./prototype/Popover";
 
 interface PosterProps {
     name:string;
@@ -11,7 +12,7 @@ export default function Poster({name, description, inspirations}:PosterProps) {
         <div className="h-[calc(100vh-20vh)] font-mono md:grid grid-cols-8 grid-rows-1 gap-8 md:m-14">
         
             <div className="prototype place-content-center border-8 border-white col-span-5">
-                <NavigationMenu />
+                <Popover />
             </div>
             <div className="border-b-1 col-span-3 flex flex-col justify-end gap-1">
                 <h2 className="h-12 border-t-1 text-sm font-mono uppercase tracking-wide">{name}</h2>
