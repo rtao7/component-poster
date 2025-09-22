@@ -1,22 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
-  User,
-} from "lucide-react";
-import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 import Image from "next/image";
 import Placeholder from "../../../public/placeholder.png";
@@ -24,6 +14,7 @@ import Placeholder from "../../../public/placeholder.png";
 const CommandComponent = () => {
   return (
     <motion.div
+      layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
