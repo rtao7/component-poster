@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Command from "./Command";
-import { BookOpenIcon } from "lucide-react";
+import { BookOpenIcon, File, ToolCaseIcon } from "lucide-react";
 
 const Nav = () => {
   const [showCommand, setShowCommand] = useState(false);
@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <>
       {showCommand ? <Command /> : null}
-      <div className="px-2 py-1.5 flex gap-2 bg-white rounded-md border shadow-lg border-gray-300">
+      <div className="font-sans font-medium px-2 py-1.5 flex gap-1 bg-white rounded-md border shadow-lg border-gray-300">
         <button
           onClick={isShowCommand}
           className="flex place-items-center gap-1 text-black/80 hover:bg-black/10 rounded-sm px-4 py-2 leading-1"
@@ -20,11 +20,19 @@ const Nav = () => {
           <BookOpenIcon size={16} />
           Skill
         </button>
-        <button className="text-black/80 hover:bg-black/10 rounded-sm px-4 py-4 leading-1">
+        <button
+          onClick={isShowCommand}
+          className="flex place-items-center gap-1 text-black/80 hover:bg-black/10 rounded-sm px-4 py-2 leading-1"
+        >
+          <ToolCaseIcon size={16} />
           Toolkit
-        </button>
-        <button className="text-black/80 hover:bg-black/10 rounded-sm px-4 py-4 leading-1">
-          Files
+        </button>{" "}
+        <button
+          onClick={isShowCommand}
+          className="flex place-items-center gap-1 text-black/80 hover:bg-black/10 rounded-sm px-4 py-2 leading-1"
+        >
+          <File size={16} />
+          File
         </button>
       </div>
     </>
